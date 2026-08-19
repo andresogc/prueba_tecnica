@@ -20,7 +20,7 @@ El proyecto está dividido en dos partes principales:
 ### 1. Base de Datos
 1. Abre el gestor de base de datos MySQL (phpMyAdmin desde XAMPP u otro).
 2. Importa o ejecuta `backend/Database/schema.sql`.
-   - Este script creará la base de datos "api_acuerdos2
+   - Este script creará la base de datos "api_acuerdos"
 
 ### 2. Backend
 1. Abre una terminal y navega a la carpeta backend
