@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acuerdos - Gestión</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; }
+        .container { max-width: 900px; margin-top: 2rem; }
+        .card { border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: none; }
+        .acuerdo-item { background-color: white; padding: 1rem; margin-bottom: 1rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Gestión de Acuerdos</a>
+            <div class="d-flex">
+                <button class="btn btn-outline-light" id="logout-btn">Cerrar Sesión</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        
+        <!-- Formulario  -->
+        <div class="card mb-4 d-none" id="create-acuerdo-card">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Crear Nuevo Acuerdo</h5>
+            </div>
+            <div class="card-body">
+                <form id="create-acuerdo-form">
+                    <div class="mb-3">
+                        <label for="titulo" class="form-label">Título</label>
+                        <input type="text" class="form-control" id="titulo" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="descripcion" class="form-label">Descripción</label>
+                        <textarea class="form-control" id="descripcion" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success">Crear Acuerdo</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Lista de Acuerdos  -->
+        <div class="card d-none" id="list-acuerdo-card">
+            <div class="card-header bg-secondary text-white d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Tablero de Acuerdos</h5>
+                <button class="btn btn-sm btn-light" id="refresh-btn">Actualizar</button>
+            </div>
+            <div class="card-body">
+                <div id="acuerdos-list">
+                    <!-- Acuerdos -->
+                    <div class="text-center text-muted py-3">Cargando acuerdos...</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/acuerdos.js"></script>
+</body>
+</html>
